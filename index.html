@@ -5,21 +5,22 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="An Luong - Personal Website">
+    <meta name="author" content="An Luong">
 
     <title>An Luong</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:wght@700&display=swap" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
 
   </head>
 
@@ -28,21 +29,20 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
+        <a class="navbar-brand" href="#page-top">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#download">Projects</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -58,8 +58,8 @@
               <h1 class="brand-heading">Hi, I'm An</h1>
               <p class="intro-text">Currently building out this website.
               Stay tuned.</p>
-              <a href="#about" class="btn btn-circle js-scroll-trigger">
-                <i class="fa fa-angle-double-down animated"></i>
+              <a href="#about" class="btn btn-circle">
+                <i class="fas fa-angle-double-down animated"></i>
               </a>
             </div>
           </div>
@@ -73,35 +73,36 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>About me</h2>
-            <p>I like to build things.
+            <p>I like to build things.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="download-section content-section text-center">
+    <!-- Projects Section -->
+    <section id="projects" class="download-section content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
           <h2>Projects</h2>
           <p>Some things I've worked on.</p>
             <ul class="list-inline banner-social-buttons">
               <li class="list-inline-item">
-                <a href="" class="btn btn-default btn-lg">
+                <a href="" class="btn btn-outline-light btn-lg">
                   <span class="network-name">Stanford</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="" class="btn btn-default btn-lg">
+                <a href="" class="btn btn-outline-light btn-lg">
                   <span class="network-name">Microsoft</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="" class="btn btn-default btn-lg">
-                  <span class="network-name">Uganda</span>
+                <a href="" class="btn btn-outline-light btn-lg">
+                  <span class="network-name">GitHub</span>
                 </a>
               </li>
             </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -111,17 +112,24 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Have any interesting ideas? Let's talk</h2>
+            <h2>Contact</h2>
+            <p>Feel free to reach out!</p>
             <ul class="list-inline banner-social-buttons">
               <li class="list-inline-item">
-                <a href="https://github.com/anvluong" class="btn btn-default btn-lg">
-                  <i class="fa fa-github fa-fw"></i>
-                  <span class="network-name">Github</span>
+                <a href="mailto:your.email@example.com" class="btn btn-default btn-lg">
+                  <i class="fas fa-envelope fa-fw"></i>
+                  <span class="network-name">Email</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/an-luong/" class="btn btn-default btn-lg">
-                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                <a href="https://github.com/anvluong" class="btn btn-default btn-lg">
+                  <i class="fab fa-github fa-fw"></i>
+                  <span class="network-name">GitHub</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://linkedin.com/in/yourprofile" class="btn btn-default btn-lg">
+                  <i class="fab fa-linkedin fa-fw"></i>
                   <span class="network-name">LinkedIn</span>
                 </a>
               </li>
@@ -131,30 +139,18 @@
       </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
-
     <!-- Footer -->
     <footer>
       <div class="container text-center">
-        <p>Copyright &copy; 2017 An Luong</p>
+        <p>&copy; 2024 An Luong. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/grayscale.js"></script>
 
   </body>
-
 </html>
