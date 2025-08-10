@@ -1,0 +1,144 @@
+// Modern CSS mixins and utilities
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Grid utilities
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// Typography utilities
+@mixin text-gradient($start-color, $end-color) {
+  background: linear-gradient(135deg, $start-color, $end-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin text-shadow($x: 0, $y: 1px, $blur: 2px, $color: rgba($dark, 0.3)) {
+  text-shadow: $x $y $blur $color;
+}
+
+// Animation utilities
+@mixin keyframe-animation($name, $duration: 1s, $timing: ease, $delay: 0s, $iteration: 1, $direction: normal, $fill-mode: both) {
+  animation: $name $duration $timing $delay $iteration $direction $fill-mode;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Hover effects
+@mixin hover-lift($distance: -5px) {
+  @include transition(transform);
+  
+  &:hover {
+    transform: translateY($distance);
+  }
+}
+
+@mixin hover-scale($scale: 1.05) {
+  @include transition(transform);
+  
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+// Glass morphism effect
+@mixin glass-effect($background: rgba($white, 0.1), $backdrop: 10px) {
+  background: $background;
+  backdrop-filter: blur($backdrop);
+  border: 1px solid rgba($white, 0.2);
+}
+
+// Responsive breakpoints (Bootstrap 5 compatible)
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: 0) { @content; }
+  } @else if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: 1400px) { @content; }
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 575.98px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 767.98px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 991.98px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1199.98px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (max-width: 1399.98px) { @content; }
+  }
+}
+
+// Button variants
+@mixin button-variant($background, $border, $color, $hover-background, $hover-border, $hover-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+  
+  &:hover {
+    background-color: $hover-background;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+  
+  &:focus, &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($background, 0.5);
+  }
+  
+  &:active, &.active {
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+}
+
+// Card styles
+@mixin card-style($background: $white, $border-radius: $border-radius-lg, $shadow: $box-shadow) {
+  background-color: $background;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  border: none;
+}
+
+// Form styles
+@mixin form-control-style($border-color: $grayscale-300, $focus-color: $primary) {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
+  &:focus {
+    border-color: $focus-color;
+    box-shadow: 0 0 0 0.2rem rgba($focus-color, 0.25);
+    outline: 0;
+  }
+}
